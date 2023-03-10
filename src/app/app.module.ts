@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddUserComponent } from './users/add-user/add-user.component';
@@ -22,7 +27,9 @@ import { AddProviderComponent } from './providersTec/add-provider/add-provider.c
 import { EditProviderComponent } from './providersTec/edit-provider/edit-provider.component';
 import { ListProvidersComponent } from './providersTec/list-providers/list-providers.component';
 import { DetailProvidersComponent } from './providersTec/detail-providers/detail-providers.component';
-import { ReactiveFormsModule } from '@angular/forms';
+
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -51,8 +58,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

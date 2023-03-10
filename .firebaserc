@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "almacen-itsh": {
+      "hosting": {
+        "inventario": [
+          "almacen-itsh"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "almacen-itsh"
+  }
+}
