@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { ReactiveFormsModule } from '@angular/forms';
 
-import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
 import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,9 +30,9 @@ import { AddProviderComponent } from './providersTec/add-provider/add-provider.c
 import { EditProviderComponent } from './providersTec/edit-provider/edit-provider.component';
 import { ListProvidersComponent } from './providersTec/list-providers/list-providers.component';
 import { DetailProvidersComponent } from './providersTec/detail-providers/detail-providers.component';
+import { AddCategoryComponent } from './category/add-category/add-category.component';
+import { ListCategoryComponent } from './category/list-category/list-category.component';
 
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -52,14 +55,18 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     AddProviderComponent,
     EditProviderComponent,
     ListProvidersComponent,
-    DetailProvidersComponent
+    DetailProvidersComponent,
+    AddCategoryComponent,
+    ListCategoryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAnalyticsModule,
+    AngularFirestoreModule
   ],
   providers: [
   ],

@@ -13,15 +13,6 @@ export const environment = {
     measurementId: 'G-CZN22G5M49',
   },
   production: false,
-  firebaseConfig: {
-    apiKey: "AIzaSyDQ-aKuLvsMKT5udZHwAqPGpsX3YWYNRks",
-    authDomain: "almacen-itsh.firebaseapp.com",
-    projectId: "almacen-itsh",
-    storageBucket: "almacen-itsh.appspot.com",
-    messagingSenderId: "312646593918",
-    appId: "1:312646593918:web:cbab5702b9de5aa874172f",
-    measurementId: "G-CZN22G5M49"
-  }
 };
 
 /*

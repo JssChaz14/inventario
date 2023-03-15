@@ -1,1 +1,29 @@
-<p>add-provider works!</p>
+<div class="container my-5">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" autocomplete="off">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" formControlName="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="tel" class="form-control" id="phone" formControlName="phone" required>
+        </div>
+        <div class="mb-3">
+            <label for="company" class="form-label">Company</label>
+            <input type="text" class="form-control" id="company" formControlName="company" required>
+        </div>
+        <div class="mb-3">
+            <label for="phone2" class="form-label">Phone 2</label>
+            <input type="tel" class="form-control" id="phone2" formControlName="phone2">
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <textarea class="form-control" id="address" formControlName="address"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
