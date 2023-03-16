@@ -32,6 +32,10 @@ import { ListProvidersComponent } from './providersTec/list-providers/list-provi
 import { DetailProvidersComponent } from './providersTec/detail-providers/detail-providers.component';
 import { AddCategoryComponent } from './category/add-category/add-category.component';
 import { ListCategoryComponent } from './category/list-category/list-category.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { NavComponent } from './shared/nav/nav.component';
+import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component';
 
 
 @NgModule({
@@ -57,7 +61,11 @@ import { ListCategoryComponent } from './category/list-category/list-category.co
     ListProvidersComponent,
     DetailProvidersComponent,
     AddCategoryComponent,
-    ListCategoryComponent
+    ListCategoryComponent,
+    HeaderComponent,
+    FooterComponent,
+    NavComponent,
+    BreadcrumbsComponent
   ],
   imports: [
     BrowserModule,
